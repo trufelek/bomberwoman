@@ -1,0 +1,35 @@
+{% extends 'base.twig' %}
+
+{% block title %}Bomberwoman{% endblock %}
+
+{% block content %}
+<h1>BOMBERWOMAN</h1>
+<div class="interface">
+	<h2 class="hello_user">Użytkownicy</h2>
+	{% if users|length > 0 %}
+	<table class="users_list">
+		<thead>
+			<tr>
+				<th>id</th>
+				<th>login</th>
+				<th>uprawnienia</th>
+			</tr>
+		</thead>
+    	{% for user in users %}
+    		<tr>
+				<td>{{ user.id|e }}</td>
+				<td>{{ user.login|e }}</td>
+				<td>{% if user.role_id|e == 1%}admin{% else %}użytkownik{% endif %}</td>
+				<td><a href="{{ url('/users/edit', {'id': user.id}) }}" title="Edycja">Edycja &raquo</a></td>
+			</tr>
+    	{% endfor %}
+    	</tbody>
+	</table>
+	{% else %}
+		<p>
+			Nie ma użytkowników do wyświetlenia.
+		</p>
+	{% endif %}
+	<a class="back" href="{{ url('/') }}">powrót</a>
+</div>
+{% endblock %}

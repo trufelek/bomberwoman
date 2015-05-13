@@ -1,0 +1,23 @@
+{% extends 'base.twig' %}
+
+{% block title %}Bomberwoman{% endblock %}
+
+{% block content %}
+<h1>BOMBERWOMAN</h1>
+<div class="interface main">
+	<h2 class="hello_user">
+        WITAJ {% if is_granted('ROLE_USER') %}{{app.security.getToken.getUsername}}{% else %}nieznajomy{% endif %}!
+    </h2>
+    <ul class="panel">
+    {% if is_granted('ROLE_USER') %}
+    	<li><a href="{{ url('/game') }}">graj</a></li>
+    	{% if is_granted('ROLE_ADMIN') %}<li><a href="{{ url('/users/viewusers') }}">użytkownicy</a></li>{% endif %}
+    	<li><a href="{{ url('/ranking') }}">ranking</a></li>
+    	<li><a href="{{ url('/auth/logout') }}">wyloguj</a></li>
+    {% else %}
+    	<li><a href="{{ url('/auth/login') }}">zaloguj</a></li>
+    	<li><a href="{{ url('/register') }}">zarejestruj</a></li>
+    {% endif %}
+    </ul>
+</div>
+{% endblock %}

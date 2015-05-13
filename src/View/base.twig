@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang = "pl">
+    <head>
+        {% block head %}
+            <title>{% block title %}{% endblock %}</title>
+            <meta charset="utf-8">
+            {% block stylesheets %}
+            <link href="{{ app.request.basepath }}/css/style.css" type="text/css" rel="stylesheet" />
+           	{% endblock %}
+        {% endblock %}
+    </head>
+    <body>
+       {% block content %}{% endblock %}
+    </body>
+</html>

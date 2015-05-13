@@ -1,0 +1,5 @@
+body{margin:0; padding:0; overflow:hidden; background-color:#FF9999;}
+
+canvas{position:absolute;}
+
+div.score{position:absolute; z-index:999; top:40px; left:40px; font:24px "Joystix Monospace", monospace;}

@@ -1,0 +1,33 @@
+{% extends 'base.twig' %}
+
+{% block title %}Bomberwoman{% endblock %}
+
+{% block content %}
+<h1>BOMBERWOMAN</h1>
+<div class="interface">
+	<h2 class="hello_user">Ranking graczy</h2>
+	{% if ranking|length > 0 %}
+	<table class="ranking_list">
+		<thead>
+			<tr>
+				<th>login</th>
+				<th>wynik</th>
+			</tr>
+		</thead>
+    	{% for rank in ranking %}
+    		<tr>
+				<td>{{ rank.login|e }}</td>
+				<td>{{ rank.score|e }}</td>
+				
+			</tr>
+    	{% endfor %}
+    	</tbody>
+	</table>
+	{% else %}
+		<p>
+			Nie ma wyników do wyświetlenia.
+		</p>
+	{% endif %}
+	<a class="back" href="{{ url('/') }}">powrót</a>
+</div>
+{% endblock %}

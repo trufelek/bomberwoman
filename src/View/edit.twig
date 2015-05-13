@@ -1,0 +1,15 @@
+{% extends 'base.twig' %}
+
+{% block title %}Edycja użytkownika{% endblock %}
+
+{% block content %}
+<h1>BOMBERWOMAN</h1>
+	<div class="interface">
+    <h2>
+        Edycja użytkownika
+    </h2>
+	<form class="form edit" action="{{ url('/users/edit', {'id' : user.id}) }}" method="post">
+	{{ form_widget(form) }}
+	</form>
+	<a class="back" href="{{ url('/users/viewusers') }}">powrót</a>
+{% endblock %}

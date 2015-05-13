@@ -1,0 +1,13 @@
+{% extends 'base.twig' %}
+
+{% block title %}Bomberwoman{% endblock %}
+
+{% block content %}
+<h1>BOMBERWOMAN</h1>
+<div class="interface scores">
+	<h2 class="hello_user">WYNIK:</h2>
+    <p class="user_score">{{score|e}}</p>
+    <a href="{{ url('/game') }}">ZAGRAJ PONOWNIE</a><br/>
+    <a href="{{ url('/') }}">powrót</a><br/>
+</div>
+{% endblock %}

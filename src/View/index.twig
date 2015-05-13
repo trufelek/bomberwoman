@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang = "pl">
+	<head>
+		{% block head %}
+			<meta charset="utf-8">
+			<title>{% block title %}Bomberwoman{% endblock %}</title>
+			{% block stylesheets %}
+			<link href="{{ app.request.basepath }}/css/game.css" type="text/css" rel="stylesheet" />
+			<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+			{% endblock %}
+		{% endblock %}
+	</head>
+	<body>
+		<div class="score">
+			<p id="username">{{app.security.getToken.getUsername}}</p>
+			WYNIK: <span id="score"></span>
+		</div>
+	{% block javascripts %}
+		<script src="{{ app.request.getBaseUrl }}../js/game.js"></script>
+		<script src="{{ app.request.getBaseUrl }}../js/board.js"></script>
+		<script src="{{ app.request.getBaseUrl }}../js/character.js"></script>
+		<script src="{{ app.request.getBaseUrl }}../js/bomb.js"></script>
+		<script src="{{ app.request.getBaseUrl }}../js/crate.js"></script>
+	{% endblock %}
+	</body>
+</html>

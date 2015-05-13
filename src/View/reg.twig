@@ -1,0 +1,16 @@
+{% extends 'base.twig' %}
+
+{% block title %}Registration{% endblock %}
+
+{% block content %}
+<h1>BOMBERWOMAN</h1>
+<div class="interface">
+    <h2>
+        Rejestracja
+    </h2>
+    <form  class ="form reg" action="{{ url('/register') }}" method="post">
+        {{ form_widget(form) }}
+    </form>
+    <a class="back" href="{{ url('/') }}">powrót</a>
+</div>
+{% endblock %}

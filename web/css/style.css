@@ -1,0 +1,36 @@
+body{margin:auto; background-color:#FF9999;}
+
+h1{font:100px "Joystix Monospace", monospace; text-align:center; margin:30px 0; text-shadow: 5px 5px 1px #FF3366;}
+h2{text-transform:uppercase;}
+h2.hello_user{text-align:center;}
+
+.interface{margin:50px auto; display:block; min-height:200px; width:45%; padding:25px 50px; text-align:left; background-color:#c9b7c3; border:solid 5px; border-color:#D6E2E3 #B493A3 #92566D #D6E4E5; font-family:"Joystix Monospace", monospace;}
+
+.interface a{text-decoration: none; color:#FF3366;}
+.interface a:hover{color:#993333;}
+
+.interface.scores{text-align:center;}
+.interface.scores a{color:#000; font-size:24px; line-height:50px;}
+.interface.scores a:hover{color:#FF3366;}
+
+.interface p.user_score{text-align:center; font-size:80px;}
+
+
+.interface ul.panel{list-style:none outside none; text-align:center; margin:20px auto; padding:0; font-size:24px;}
+.interface ul.panel li{padding:5px 0;}
+
+.interface .form{margin-top:10px; position:relative;}
+.interface .form.log div#form{display:block; clear:both; width:60%;}
+.interface .form.reg div#form{display:block; clear:both; width:92%;}
+.interface .form.edit div{display:block; clear:both; width:70%;}
+.interface .form.edit input{width:43%;}
+.interface .form div#form div{min-height:35px;}
+.interface .form div#form div ul{font-size:10px; float:left; list-style:none;}
+.interface .form label{float:left;}
+.interface .form input{float:right; width:55%;}
+.interface .form select{float:right; width:45%;}
+.interface .form button{margin:20px 0; border-color:#D6E2E3 #B493A3 #92566D #D6E4E5; font-family:"Joystix Monospace", monospace; cursor:pointer;}
+.interface .form button:hover{color:#993333;}
+
+.interface table{width:100%; padding:10px 0 25px;}
+.interface table th{font-size:18px; color:#92566D;}
